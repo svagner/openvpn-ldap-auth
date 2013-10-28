@@ -21,7 +21,11 @@
 
 #include <ldap.h>
 #include <errno.h>
+#ifdef FreeBSD
+#include <openvpn-plugin.h>
+#else
 #include <openvpn/openvpn-plugin.h>
+#endif
 
 #include "debug.h"
 #include "la_ldap.h"

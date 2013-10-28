@@ -38,7 +38,11 @@
 #include <unistd.h>
 #include <string.h>
 
+#ifdef FreeBSD
+#include <openvpn-plugin.h>
+#elif
 #include <openvpn/openvpn-plugin.h>
+#endif
 #include <sys/types.h>
 #include <unistd.h>
 

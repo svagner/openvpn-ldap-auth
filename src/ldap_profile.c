@@ -29,7 +29,11 @@
 
 #include <ldap.h>
 #include <errno.h>
+#ifdef FreeBSD
+#include <sys/time.h>
+#elif
 #include <time.h>
+#endif
 #include <stdio.h>
 
 

@@ -22,13 +22,18 @@
 #ifndef __LA_LDAP_H__
 #define __LA_LDAP_H__
 
+#ifdef FreeBSD
+#include <ldap.h>
+#endif
 #include "cnf.h"
 #include "list.h"
 #include "utils.h"
 #include "action.h"
 
+#ifndef FreeBSD
 /* ldap forward declaration */
 typedef struct ldap LDAP;
+#endif
 
 typedef struct ldap_context
 {

@@ -32,6 +32,9 @@
 #include "action.h"
 #include "la_ldap.h"
 #include "client_context.h"
+#ifdef FreeBSD
+#include <time.h>
+#endif
 
 
 

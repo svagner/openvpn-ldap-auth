@@ -49,7 +49,11 @@
 #include <sys/resource.h>
 #endif
 
+#ifdef FreeBSD
+#include <openvpn-plugin.h>
+#elif
 #include <openvpn/openvpn-plugin.h>
+#endif
 #include <errno.h>
 #include <ldap.h>
 
